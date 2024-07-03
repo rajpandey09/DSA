@@ -1,0 +1,209 @@
+/*take 5 elements as input and print their double
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[5];
+    for(int i=0;i<5;++i){
+        cin>>arr[i];
+
+    }
+    cout<<endl;
+    for(int i=0;i<5;++i){
+        cout<<2*arr[i];
+    }
+    return 0;
+}*/
+
+
+/*change the inputs with 1
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[5] = {1,2,3,4,5};
+    for(int i=0;i<5;++i){
+        arr[i] = 1;
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}*/
+
+
+/*note
+1)agar hum array ko intialise kiye jaise arr 10 value hai agar 1 bhi intialise hai toh remaining vlaue will be 0 if  not intialise
+2)agar intialise nhi kiya tho value will be garbage value
+3)in function if we call by value then a copy of variable is created
+4)if we call by reference then it change the actual variable
+FUNCTION IN ARRAY
+ if we use array in function then it is always call by reference changes the same variable
+ in fucntion we have to pass arr and its size to know how many elements are availaible out of total elements
+*/
+
+/*linear search 
+//Using function
+#include<iostream>
+using namespace std;
+bool lin(int arr[],int size, int key){
+    //linear
+    for(int i=0;i<size;i++){
+        if(arr[i]==key){
+            return true;
+        }
+    }
+        return false;
+
+}
+int main(){
+    int arr[5] = {1,5,3,8,6};
+    int size = 5;
+    int key;
+    cin>>key;
+    if(lin(arr,size,key)){
+        cout<<"found"<<endl;
+    }
+    else{
+    cout<<"not found"<<endl;}
+    return 0;
+}
+//using boolean
+#include<iostream>
+using namespace std;
+int main(){
+   int arr[5] = {1,4,2,6,9};
+   int size = 5;
+   int key = 4;
+   bool flag = 0;
+   //prsent 1
+   //absent 0
+   for(int i=0;i<size;i++){
+    if(arr[i]==key){
+    flag = 1;
+    break;
+   }
+   }
+   if (flag==1)
+   cout<<"present";
+   else
+   cout<<"absent";
+   return 0;
+   }
+   */
+
+
+/*counting 0's and 1's in array
+#include <iostream>
+using namespace std;
+int main()
+{
+   int arr[5] = {0,0,0,1,1};
+   int size  = 5;
+   int zero = 0,one = 0;
+   for(int i=0;i<size;i++)
+   {
+       if(arr[i]==0){
+           zero++;
+       }
+       else if(arr[i]==1){
+           one++;
+       }
+   }
+   cout<<zero<<" "<<one;
+    return 0;
+}*/
+
+/*finding maximum and minimum in an array
+//note in max and min use int max = INT_MIN and int min = INT_MAX and also header file #include<limits.h>
+#include<iostream>
+#include<limits.h>
+using namespace std;
+int main(){
+    int arr[5]={2,16,13,14,1};
+    int size = 5;
+    int max = INT_MIN;
+    for(int i = 0;i<size;i++){
+        if(arr[i]>max){
+            max = arr[i];
+        }
+    }
+    cout<<max;
+}*/
+
+
+
+/*extreme print in array like two pointer appro
+isme hum first or last element ko print karate hai
+process
+print start
+print end
+start++
+end++
+loop break condition if start>end and also for odd one if start == end print only 1 time let see
+
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[6]={1,2,3,4,5,6};
+    int size = 6;
+    int start = 0;
+    int end = size-1;
+    while(start<=end){
+        if(start==end){
+            cout<<arr[start]<<" ";
+        }
+        else{
+            cout<<arr[start];
+            cout<<arr[end];
+
+            }
+            start++;
+            end--;
+    }
+    return 0;
+}
+*/
+
+
+/*reverse an array
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[6]={1,2,3,4,5,6};
+    int size = 6;
+    int start = 0;
+    int end = size-1;
+    while(end>=start){
+        cout<<arr[end];
+        end--;
+    }
+    return 0;
+}
+below is done through two pointer
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[7]={1,2,3,4,5,6,7};
+    int size = 7;
+    int start = 0;
+    int end = size-1;
+    while(end>=start){
+        swap(arr[start],arr[end]);
+        start++;
+        end--;
+    }
+    for(int i=0;i<size;i++){
+        cout<<arr[i];
+    }
+    return 0;
+
+}*/
+
+//homework swap two number using temp var , addition, xor
+//for addition
+//a = a+b;
+//b = a-b;
+//a = a-b;
+//
+//for xor
+//a = a^b;
+//b = a^b;
+//a = a^b;
+//recommended cppreference and cplusplus.com website for reference regarding concept
